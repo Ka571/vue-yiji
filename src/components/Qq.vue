@@ -49,17 +49,24 @@
     <div class="tab">
       <ul class="box">
         <li
-          :class="tapActive===index?'box-active':'box1-active'"
+          :class="num===index?'box-active':'box1-active'"
           v-for="(topic,index) in topics"
-          @click="tapActive=index"
+          @click="changTap(index)"
           :key="topic.id"
         >{{topic.text}}</li>
       </ul>
-      <div v-for="(topic,index) in topics" v-show="tapActive===index" :key="topic.id" class="box2">
-        <div v-for="pic in topic.pics" :key="pic.id">
-          <router-link :to="`${$publicUrl}/home/${pic.id}`">
-            <img :src="pic.src" alt />
-          </router-link>
+      <div
+        class="lunbo"
+        :style="{marginLeft:tapActive?0:'-100vw',
+      transition: isTrantion ? 'margin-left 0.8s' : ''
+      }"
+      >
+        <div v-for="(topic) in topics" :key="topic.id" class="box2">
+          <div v-for="pic in topic.pics" :key="pic.id">
+            <router-link :to="`${$publicUrl}/home/${pic.id}`">
+              <img :src="pic.src" alt />
+            </router-link>
+          </div>
         </div>
       </div>
     </div>
@@ -73,7 +80,9 @@ export default {
   name: "qq",
   data() {
     return {
-      tapActive: 0
+      tapActive: true,
+      isTrantion: true,
+      num: 0
     };
   },
   computed: {
@@ -81,7 +90,12 @@ export default {
       return this.$store.state.pics.topics;
     }
   },
-
+  methods: {
+    changTap(index) {
+      this.tapActive = !this.tapActive;
+      this.num = index;
+    }
+  },
   created() {},
   mounted() {
     new Swiper(".bannerOne", {
@@ -118,7 +132,7 @@ export default {
 }
 .qq {
   width: 100vw;
-  height: 100vh;
+
   position: relative;
   padding-top: 1.63rem;
 }
@@ -129,7 +143,7 @@ export default {
   left: 0;
   width: 100vw;
   padding: 0.5rem 0.44rem 0.37rem 0;
-  background-color: #f0f0f2;
+  background-color: #fff;
   display: flex;
   flex-direction: row-reverse;
 }
@@ -164,6 +178,7 @@ export default {
 .box {
   display: flex;
   width: 100%;
+  background-color: #c9c9c9;
 }
 .box > li {
   width: 50%;
@@ -174,11 +189,33 @@ export default {
 .box > li:first-child {
   text-align: right;
   padding-right: 0.3rem;
+  border-top-right-radius: 0.55rem;
+  border-bottom-right-radius: 0.55rem;
+}
+.box > li:last-child {
+  text-align: left;
+  padding-left: 0.3rem;
+  border-top-left-radius: 0.55rem;
+  border-bottom-left-radius: 0.55rem;
 }
 .box2 img {
   display: block;
-  width: 100%;
+  width: 100vw;
   margin-bottom: 10px;
+}
+.lunbo {
+  width: 200vw;
+  display: flex;
+}
+.tab {
+  width: 100%;
+  overflow: hidden;
+}
+.box2 {
+  width: 100vw;
+}
+.box2 > div {
+  width: 100vw;
 }
 .tab {
   padding-bottom: 1.57rem;

@@ -11,6 +11,7 @@ import Main from "./components/Main.vue"
 import Di from "./components/Ditu.vue"
 import Ping from "./components/PingLun.vue"
 import PUBLIC from "./public"
+
 const routes = [
   {
     path: PUBLIC + "/",

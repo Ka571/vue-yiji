@@ -109,11 +109,7 @@ export default {
     }
   },
   created() {
-    console.log(
-      this.$store.state.main.comments.filter(
-        ele => ele.postId === this.$route.params.id
-      )
-    );
+    console.log(this.$route.params.id);
   },
   computed: {
     comments() {

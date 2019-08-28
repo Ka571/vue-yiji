@@ -21,7 +21,11 @@
         :key="recommend.id"
         class="box2"
       >
-        <img v-for="pic in recommend.pics" :key="pic.id" :src="pic.src" alt />
+        <div v-for="pic in recommend.pics" :key="pic.id">
+          <router-link :to="`${$publicUrl}/home/${pic.id}`">
+            <img :src="pic.src" alt />
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
