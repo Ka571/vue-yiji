@@ -15,7 +15,7 @@
       <p>{{post.text}}</p>
       <p>{{post.text1}}</p>
     </div>
-    <div>
+    <div class="a-a">
       <img :src="post.src1" alt />
     </div>
     <div class="text">
@@ -129,6 +129,9 @@ export default {
 </script>
 
 <style>
+.a-a {
+  margin-bottom: 0.15rem;
+}
 .tan-fot {
   border-top: 0.01rem solid red;
   padding: 0.5rem 0;
@@ -247,13 +250,15 @@ export default {
 .tit > span {
   padding: 0.15rem 0.3rem;
   background-color: #dd4f43;
-  border-top-right-radius: 0.2rem;
-  border-bottom-right-radius: 0.2rem;
-  font-size: 0.4rem;
+  border-top-right-radius: 0.28rem;
+  border-bottom-right-radius: 0.28rem;
+  font-size: 0.28rem;
   color: white;
   display: block;
-  width: 2.24rem;
+  width: 2.1rem;
   margin-bottom: 0.15rem;
+  letter-spacing: 0.03rem;
+  font-weight: normal;
 }
 .text {
   padding: 0 0.42rem;

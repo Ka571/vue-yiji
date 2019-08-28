@@ -11,7 +11,7 @@ const pics = {
           },
           {
             id: "2",
-            src: "https://github.com/Ka571/github/blob/master/images/u11533_09.jpg?raw=true"
+            src: "https://github.com/Ka571/github/blob/master/images/u1151_03.jpg?raw=true"
           },
           {
             id: "3",
@@ -23,7 +23,7 @@ const pics = {
           },
           {
             id: "6",
-            src: "https://github.com/Ka571/github/blob/master/images/u1151_03.jpg?raw=true"
+            src: "https://github.com/Ka571/github/blob/master/images/u11533_09.jpg?raw=true"
           }
         ]
       },

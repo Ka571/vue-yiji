@@ -50,6 +50,29 @@ const main = {
             srcOne: "https://github.com/Ka571/github/blob/master/images/u24606_09.jpg?raw=true"
           }
         ]
+      },
+      {
+        id: "18881",
+        postId: "2",
+        src: "https://github.com/Ka571/github/blob/master/images/%E7%BC%96%E5%B9%B4%E5%8F%B2%E4%B8%AA%E9%A1%B501_01.jpg?raw=true",
+        text: "本次展览将从人像摄影家肖全为杨丽萍拍摄的众多摄影中挑选出一组品向观众展示.",
+        text1: "一个是舞之精灵，美得化身。一个被誉为中国最好的人像摄影家。两人的心灵碰撞，会擦出什么样的火花?摄影师下真实的杨丽萍是什么样的?25日开始的心动展，无疑极大的撩起了人们的好奇心。",
+        src1: "https://github.com/Ka571/github/blob/master/images/%E7%BC%96%E5%B9%B4%E5%8F%B2%E4%B8%AA%E9%A1%B507_03.jpg?raw=true",
+        author: "肖全，男，1959年生于四川成都。曾任深圳《街道》杂志摄影记者，被称为中国最好的人像摄影师，1980年开始'我们这一代'的摄影，1991年出版天堂之鸟的三毛摄影专辑，1992年在瑞士举办个展。1993年在法国参加摄影联展。1997年出版《我们这一代》。2000年出版《我镜头下的美丽女人》",
+        pics: [
+          {
+            id: "555",
+            srcOne: "https://github.com/Ka571/github/blob/master/images/%E7%BC%96%E5%B9%B4%E5%8F%B2%E4%B8%AA%E9%A1%B505_09.jpg?raw=true"
+          },
+          {
+            id: "5s55",
+            srcOne: "https://github.com/Ka571/github/blob/master/images/%E7%BC%96%E5%B9%B4%E5%8F%B2%E4%B8%AA%E9%A1%B507_07.jpg?raw=true"
+          },
+          {
+            id: "a5s55",
+            srcOne: "https://github.com/Ka571/github/blob/master/images/%E7%BC%96%E5%B9%B4%E5%8F%B2%E4%B8%AA%E9%A1%B507_11.jpg?raw=true"
+          }
+        ]
       }
     ],
     comments: [
