@@ -9,7 +9,6 @@ import Recommend from "./components/Recommend.vue"
 import Qq from "./components/Qq.vue"
 import Main from "./components/Main.vue"
 import Di from "./components/Ditu.vue"
-import Ping from "./components/PingLun.vue"
 import PUBLIC from "./public"
 
 const routes = [
@@ -48,10 +47,7 @@ const routes = [
     path: PUBLIC + "/ditu/:id",
     component: Di,
   },
-  {
-    path: PUBLIC + "/comment/:id",
-    component: Ping
-  }
+
 ]
 const router = new VueRouter({
   routes,

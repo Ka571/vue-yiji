@@ -203,6 +203,11 @@ const main = {
       }
     ]
   },
-  mutation: {}
+  mutation: {
+    addComment(state, newComment) {
+      state.comments.filter(ele => ele.postID === id).push(newComment)
+    }
+  },
+  actione: {}
 }
 export default main
