@@ -98,7 +98,14 @@
         </div>
         <div class="ping-fot">
           <textarea v-model="val" placeholder="说点什么...." cols="30" rows="10"></textarea>
-          <button @click="addComment(post.id)">添加评论</button>
+          <button
+            @click="$store.commit('addComment',{
+            comment:val,
+            id:new Date().getTime(),
+            postId:post.postId,
+            changPing:changPing()
+          })"
+          >添加评论</button>
         </div>
       </div>
     </div>
@@ -117,6 +124,7 @@ export default {
       val: ""
     };
   },
+
   methods: {
     changPing() {
       this.ping = !this.ping;
@@ -126,13 +134,6 @@ export default {
     },
     changeActive() {
       this.active = !this.active;
-    },
-    addComment(id) {
-      this.$store.commit("addComment", {
-        id: new Date().getTime(),
-        postId: id,
-        comment: this.val
-      });
     }
   },
   created() {

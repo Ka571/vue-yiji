@@ -203,9 +203,10 @@ const main = {
       }
     ]
   },
-  mutation: {
-    addComment(state, newComment) {
-      state.comments.filter(ele => ele.postID === id).push(newComment)
+  mutations: {
+    addComment(state, payload) {
+      state.comments.push(payload),
+        payload.changPing
     }
   },
   actione: {}
